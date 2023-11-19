@@ -42,104 +42,113 @@ class _MainPageState extends State<MainPage> {
           ),
         ),
         SizedBox(
-          height: altura * 0.142,
+          height: altura * 0.1,
+          width: largura * 1,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
             itemCount: marcas.length,
             itemBuilder: (context, index) {
               final marca = marcas[index];
               return Container(
-                width: largura * 0.2,
-                margin: const EdgeInsets.all(15),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(50),
-                  color: const Color.fromARGB(255, 0, 0, 0),
-                ),
-                child: Image.asset(
-                  marca.mainImage,
-                  fit: BoxFit.fill,
+                margin: EdgeInsets.all(5),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(10.0),
+                  child: Image.asset(
+                    marca.mainImage,
+                    width: largura * 0.3,
+                    fit: BoxFit.cover,
+                  ),
                 ),
               );
             },
           ),
         ),
         Container(
-          height: altura * 0.49,
+          height: altura * 0.613,
           decoration: const BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(20), topRight: Radius.circular(20))),
-          child: ListView.builder(
-            itemCount: veiculos.length,
-            itemBuilder: (context, index) {
-              final veiculo = veiculos[index];
-              return Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Container(
-                    height: altura * 0.36,
-                    width: largura * 1,
-                    margin: const EdgeInsets.all(10),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: const Color.fromARGB(255, 235, 235, 235),
-                    ),
-                    child: Stack(
-                      children: [
-                        Align(
-                          alignment: Alignment.topCenter,
-                          child: Image.asset(
-                            veiculo.image,
+          child: Expanded(
+            child: ListView.builder(
+              itemCount: veiculos.length,
+              itemBuilder: (context, index) {
+                final veiculo = veiculos[index];
+                return Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Container(
+                      height: altura * 0.36,
+                      width: largura * 1,
+                      margin: const EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: const Color.fromARGB(255, 235, 235, 235),
+                      ),
+                      child: Stack(
+                        children: [
+                          Align(
+                            alignment: Alignment.topCenter,
+                            child: Image.asset(
+                              veiculo.image,
+                            ),
                           ),
-                        ),
-                        Align(
-                          alignment: Alignment.bottomLeft,
-                          child: Padding(
-                            padding: const EdgeInsets.all(20.0),
-                            child: RichText(
-                              textAlign: TextAlign.start,
-                              text: TextSpan(
-                                children: [
-                                  TextSpan(
-                                    text: veiculo.nome,
-                                    style: const TextStyle(
-                                        color: Colors.black,
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                  const TextSpan(text: ' \n '),
-                                  TextSpan(
-                                    text: veiculo.preco,
-                                    style: const TextStyle(
-                                        color: Colors.black, fontSize: 9),
-                                  ),
-                                  const TextSpan(text: '   '),
-                                  TextSpan(
-                                    text: veiculo.marca,
-                                    style: const TextStyle(
-                                        color: Colors.black, fontSize: 9),
-                                  ),
-                                ],
+                          Align(
+                            alignment: Alignment.bottomLeft,
+                            child: Padding(
+                              padding: const EdgeInsets.all(10.0),
+                              child: RichText(
+                                textAlign: TextAlign.start,
+                                text: TextSpan(
+                                  children: [
+                                    TextSpan(
+                                      text: veiculo.marca,
+                                      style: const TextStyle(
+                                          color: Colors.black, fontSize: 9),
+                                    ),
+                                    const TextSpan(text: ' '),
+                                    TextSpan(
+                                      text: veiculo.nome,
+                                      style: const TextStyle(
+                                          color: Colors.red,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                    const TextSpan(text: ' \n '),
+                                    TextSpan(
+                                      text: veiculo.preco,
+                                      style: const TextStyle(
+                                          color: Colors.black, fontSize: 9),
+                                    ),
+                                    const TextSpan(text: ' \n '),
+                                    TextSpan(
+                                      text:
+                                          'Velocidade máxima: ${veiculo.velocidade}',
+                                      style: const TextStyle(
+                                          color: Colors.black, fontSize: 9),
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
                           ),
-                        ),
-                        Align(
-                          alignment: Alignment.bottomRight,
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: ElevatedButton(
-                              onPressed: () {},
-                              child: const Text('Ver Mais'),
+                          Align(
+                            alignment: Alignment.bottomRight,
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: ElevatedButton(
+                                onPressed: () {},
+                                child: const Text('Ver Mais'),
+                              ),
                             ),
-                          ),
-                        )
-                      ],
+                          )
+                        ],
+                      ),
                     ),
-                  ),
-                ],
-              );
-            },
+                  ],
+                );
+              },
+            ),
           ),
         ),
       ]),

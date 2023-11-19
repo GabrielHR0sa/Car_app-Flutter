@@ -17,7 +17,7 @@ class _LikePageState extends State<LikePage> {
     return Material(
       color: const Color.fromARGB(255, 235, 235, 235),
       child: SizedBox(
-        height: altura * 0.76,
+        height: altura * 0.805,
         width: largura * 1,
         child: ListView.builder(
             itemCount: veiculos.length,

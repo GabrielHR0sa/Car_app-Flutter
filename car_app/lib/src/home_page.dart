@@ -56,59 +56,53 @@ class _HomePageState extends State<HomePage> {
       ),
       bottomNavigationBar: Container(
         color: Colors.white,
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(20),
-            child: NavigationBar(
-              height: altura * 0.09,
-              backgroundColor: Colors.black,
-              onDestinationSelected: (int index) {
-                setState(() {
-                  currentPageIndex = index;
-                });
-              },
-              selectedIndex: currentPageIndex,
-              destinations: const <Widget>[
-                NavigationDestination(
-                  icon: Icon(
-                    Icons.home,
-                    color: Colors.white,
-                  ),
-                  label: '',
-                ),
-                NavigationDestination(
-                  icon: Icon(
-                    CupertinoIcons.heart,
-                    color: Colors.white,
-                  ),
-                  label: '',
-                  selectedIcon: Icon(
-                    CupertinoIcons.heart_fill,
-                    color: Colors.white,
-                  ),
-                ),
-                NavigationDestination(
-                  icon: Icon(
-                    CupertinoIcons.bag,
-                    color: Colors.white,
-                  ),
-                  label: '',
-                  selectedIcon: Icon(
-                    CupertinoIcons.bag_fill,
-                    color: Colors.white,
-                  ),
-                ),
-                NavigationDestination(
-                  icon: Icon(
-                    Icons.settings,
-                    color: Colors.white,
-                  ),
-                  label: '',
-                ),
-              ],
+        child: NavigationBar(
+          height: altura * 0.07,
+          backgroundColor: Colors.red[800],
+          onDestinationSelected: (int index) {
+            setState(() {
+              currentPageIndex = index;
+            });
+          },
+          selectedIndex: currentPageIndex,
+          destinations: const <Widget>[
+            NavigationDestination(
+              icon: Icon(
+                Icons.home,
+                color: Colors.white,
+              ),
+              label: '',
             ),
-          ),
+            NavigationDestination(
+              icon: Icon(
+                CupertinoIcons.heart,
+                color: Colors.white,
+              ),
+              label: '',
+              selectedIcon: Icon(
+                CupertinoIcons.heart_fill,
+                color: Colors.white,
+              ),
+            ),
+            NavigationDestination(
+              icon: Icon(
+                CupertinoIcons.bag,
+                color: Colors.white,
+              ),
+              label: '',
+              selectedIcon: Icon(
+                CupertinoIcons.bag_fill,
+                color: Colors.white,
+              ),
+            ),
+            NavigationDestination(
+              icon: Icon(
+                Icons.settings,
+                color: Colors.white,
+              ),
+              label: '',
+            ),
+          ],
         ),
       ),
       body: <Widget>[

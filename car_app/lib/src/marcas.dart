@@ -11,22 +11,22 @@ class Marcas {
         mainImage: 'assets/images/fiat.png',
       ),
       Marcas(
-        mainImage: 'assets/images/fiat.png',
+        mainImage: 'assets/images/volks.png',
       ),
       Marcas(
-        mainImage: 'assets/images/fiat.png',
+        mainImage: 'assets/images/chevrolet.png',
       ),
       Marcas(
-        mainImage: 'assets/images/fiat.png',
+        mainImage: 'assets/images/hyundai.png',
       ),
       Marcas(
-        mainImage: 'assets/images/fiat.png',
+        mainImage: 'assets/images/honda.png',
       ),
       Marcas(
-        mainImage: 'assets/images/fiat.png',
+        mainImage: 'assets/images/toyota.png',
       ),
       Marcas(
-        mainImage: 'assets/images/fiat.png',
+        mainImage: 'assets/images/peugeot.png',
       ),
     ];
   }

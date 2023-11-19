@@ -17,7 +17,7 @@ class _BuyPageState extends State<BuyPage> {
     return Material(
       child: Container(
         color: const Color.fromARGB(255, 53, 53, 53),
-        height: altura * 0.76,
+        height: altura * 0.805,
         child: Stack(
           alignment: Alignment.bottomCenter,
           children: [
@@ -36,6 +36,7 @@ class _BuyPageState extends State<BuyPage> {
                 ),
               ),
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -76,8 +77,8 @@ class _BuyPageState extends State<BuyPage> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Container(
-                          height: altura * 0.13,
-                          width: largura * 0.24,
+                          height: altura * 0.136,
+                          width: largura * 0.25,
                           decoration: BoxDecoration(
                               color: const Color.fromARGB(255, 184, 184, 184),
                               borderRadius: BorderRadius.circular(10)),
@@ -108,8 +109,8 @@ class _BuyPageState extends State<BuyPage> {
                           ),
                         ),
                         Container(
-                          height: altura * 0.13,
-                          width: largura * 0.24,
+                          height: altura * 0.136,
+                          width: largura * 0.25,
                           decoration: BoxDecoration(
                               color: const Color.fromARGB(255, 184, 184, 184),
                               borderRadius: BorderRadius.circular(10)),
@@ -139,8 +140,8 @@ class _BuyPageState extends State<BuyPage> {
                           ),
                         ),
                         Container(
-                          height: altura * 0.13,
-                          width: largura * 0.24,
+                          height: altura * 0.136,
+                          width: largura * 0.25,
                           decoration: BoxDecoration(
                               color: const Color.fromARGB(255, 184, 184, 184),
                               borderRadius: BorderRadius.circular(10)),

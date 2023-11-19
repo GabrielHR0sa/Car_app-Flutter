@@ -61,17 +61,20 @@ flutter:
   assets:
     - assets/images/logo.jpg
     - assets/images/perfil.jpg
-    - assets/images/corolla.jpg
-    - assets/images/chevrolet.jpg
+    - assets/images/chevrolet.png
     - assets/images/fiat.png
     - assets/images/hyundai.png
-    - assets/images/honda.jpg
-    - assets/images/peugeot.jpg
+    - assets/images/honda.png
+    - assets/images/peugeot.png
     - assets/images/toyota.png
-    - assets/images/volks.jpg
+    - assets/images/volks.png
     - assets/images/onix.png
     - assets/images/hb20.png
     - assets/images/mobi.png
+    - assets/images/corolla.png
+    - assets/images/civic.png
+    - assets/images/208.png
+    - assets/images/amarok.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
