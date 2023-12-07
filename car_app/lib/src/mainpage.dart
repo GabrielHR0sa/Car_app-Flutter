@@ -104,7 +104,7 @@ class _MainPageState extends State<MainPage> {
                                     TextSpan(
                                       text: veiculo.marca,
                                       style: const TextStyle(
-                                          color: Colors.black, fontSize: 9),
+                                          color: Colors.black, fontSize: 12),
                                     ),
                                     const TextSpan(text: ' '),
                                     TextSpan(
@@ -118,14 +118,14 @@ class _MainPageState extends State<MainPage> {
                                     TextSpan(
                                       text: veiculo.preco,
                                       style: const TextStyle(
-                                          color: Colors.black, fontSize: 9),
+                                          color: Colors.black, fontSize: 20),
                                     ),
                                     const TextSpan(text: ' \n '),
                                     TextSpan(
                                       text:
                                           'Velocidade máxima: ${veiculo.velocidade}',
                                       style: const TextStyle(
-                                          color: Colors.black, fontSize: 9),
+                                          color: Colors.black, fontSize: 12),
                                     ),
                                   ],
                                 ),
@@ -135,7 +135,7 @@ class _MainPageState extends State<MainPage> {
                           Align(
                             alignment: Alignment.bottomRight,
                             child: Padding(
-                              padding: const EdgeInsets.all(8.0),
+                              padding: const EdgeInsets.all(10.0),
                               child: ElevatedButton(
                                 onPressed: () {},
                                 child: const Text('Ver Mais'),
